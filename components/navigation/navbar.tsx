@@ -84,7 +84,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-baseline space-x-2 group flex-shrink-0"
+            className="flex items-baseline space-x-2 group shrink-0"
             onClick={closeMobileMenu}
           >
             <div className="w-12 h-12  overflow-hidden  transform group-hover:scale-110 transition-transform duration-200 ">
@@ -94,7 +94,7 @@ export default function Header() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <span className="font-bold font-serif items-center text-3xl bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent sm:inline tracking-tight transform group-hover:scale-110 transition-transform duration-200">
+            <span className="font-bold font-serif items-center text-3xl bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent sm:inline tracking-tight transform group-hover:scale-110 transition-transform duration-200">
               StudyHub
             </span>
           </Link>
@@ -162,7 +162,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-sm py-2 px-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-linear-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-sm py-2 px-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Log in
             </Link>
@@ -210,10 +210,10 @@ export default function Header() {
               className="flex items-center space-x-2 group"
               onClick={closeMobileMenu}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-r from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <span className="font-bold text-xl bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 StudyHub
               </span>
             </Link>
@@ -329,7 +329,7 @@ export default function Header() {
 
                 <Link
                   href="/signup"
-                  className="block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-lg py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 text-center shadow-lg"
+                  className="block bg-linear-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-lg py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 text-center shadow-lg"
                   onClick={closeMobileMenu}
                 >
                   Sign Up
