@@ -100,7 +100,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center px-[2vw] space-x-8">
             <Link
               href="/"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-all duration-200 font-sans  hover:scale-105"
@@ -158,16 +158,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Auth Links */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/login"
-              className="bg-linear-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-sm py-2 px-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Log in
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -202,9 +192,9 @@ export default function Header() {
 
       {/* ✅ Mobile Sidebar Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-y-0 right-0 w-80 max-w-full bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 z-50 transition-transform duration-300 ease-in-out mobile-menu translate-x-0">
+        <div className="md:hidden fixed inset-y-0 right-0 w-60 max-w-full backdrop-blur-sm dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 z-50 transition-transform duration-300 ease-in-out mobile-menu translate-x-0">
           {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800">
+          <div className="flex items-center justify-between p-6 border-b  border-gray-200 dark:border-gray-800">
             <Link
               href="/"
               className="flex items-center space-x-2 group"
@@ -239,13 +229,13 @@ export default function Header() {
           </div>
 
           {/* Sidebar Content */}
-          <div className="h-[calc(100vh-80px)] overflow-y-auto">
-            <nav className="p-6 space-y-6">
+          <div className="h-[calc(100vh-80px)] bg-black/70 backdrop-blur-lg overflow-y-auto">
+            <nav className="p-6 space-y-6 flex flex-col items-end">
               {/* Main Navigation Links */}
-              <div className="space-y-4">
+              <div className="space-y-3  ">
                 <Link
                   href="/"
-                  className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
+                  className="block py-3 px-4 text-gray-200 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
                   onClick={closeMobileMenu}
                 >
                   Home
@@ -256,7 +246,7 @@ export default function Header() {
                     onClick={() =>
                       setIsResourceDropdownOpen(!isResourceDropdownOpen)
                     }
-                    className="w-full flex items-center justify-between py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
+                    className="w-full flex items-center justify-between py-3 px-4 text-gray-300 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
                   >
                     Resources
                     <svg
@@ -282,7 +272,7 @@ export default function Header() {
                         <Link
                           key={dept.name}
                           href={dept.href}
-                          className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-cyan-400 text-base transition-all duration-200 hover:translate-x-1"
+                          className="block py-2 text-gray-200 dark:text-gray-400 hover:text-blue-600 dark:hover:text-cyan-400 text-base transition-all duration-200 hover:translate-x-1"
                           onClick={closeMobileMenu}
                         >
                           {dept.name}
@@ -294,7 +284,7 @@ export default function Header() {
 
                 <Link
                   href="/about"
-                  className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
+                  className="block py-3 px-4 text-gray-300 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
                   onClick={closeMobileMenu}
                 >
                   About Us
@@ -302,7 +292,7 @@ export default function Header() {
 
                 <Link
                   href="/contact"
-                  className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
+                  className="block py-3 px-4 text-gray-300 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
                   onClick={closeMobileMenu}
                 >
                   Contact Us
@@ -310,29 +300,10 @@ export default function Header() {
 
                 <Link
                   href="/request-resource"
-                  className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
+                  className="block py-3 px-4 text-gray-300 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg"
                   onClick={closeMobileMenu}
                 >
                   Request Resource
-                </Link>
-              </div>
-
-              {/* Auth */}
-              <div className="pt-6 space-y-4 border-t border-gray-200 dark:border-gray-800">
-                <Link
-                  href="/login"
-                  className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-sans text-lg text-center"
-                  onClick={closeMobileMenu}
-                >
-                  Sign In
-                </Link>
-
-                <Link
-                  href="/signup"
-                  className="block bg-linear-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-sans text-lg py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 text-center shadow-lg"
-                  onClick={closeMobileMenu}
-                >
-                  Sign Up
                 </Link>
               </div>
             </nav>

@@ -1,10 +1,11 @@
+import Hero from '@/components/component/hero'
 import React from 'react'
 
 
 
 const Home = () => {
   return (
-    <p>Hello, welcome to StudyHub!</p>
+    <Hero />
 
 
   )
