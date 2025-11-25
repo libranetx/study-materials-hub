@@ -1,4 +1,5 @@
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
 
 const materials = [
   {
@@ -9,6 +10,7 @@ const materials = [
     downloads: 2341,
     views: 5203,
     uploadDate: "2024-10-15",
+    imageurl: "/sbook1.jfif",
   },
   {
     id: 2,
@@ -18,6 +20,7 @@ const materials = [
     downloads: 1856,
     views: 4102,
     uploadDate: "2024-10-12",
+    imageurl: "/sbook3.jfif",
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ const materials = [
     downloads: 3124,
     views: 6850,
     uploadDate: "2024-10-10",
+    imageurl: "/sbook1.jfif",
   },
   {
     id: 4,
@@ -36,8 +40,9 @@ const materials = [
     downloads: 1632,
     views: 3421,
     uploadDate: "2024-10-08",
+    imageurl: "/abook2.jfif",
   },
-]
+];
 
 export default function FeaturedMaterials() {
   return (
@@ -75,22 +80,33 @@ export default function FeaturedMaterials() {
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex gap-6 group"
             >
               <div className="hidden sm:flex w-24 h-24 bg-linear-to-br from-blue-600 to-cyan-500 rounded-2xl items-center justify-center shrink-0 shadow-lg group-hover:shadow-xl transition-shadow">
-                <span className="text-white font-bold text-2xl">{material.type.charAt(0)}</span>
+               <img src={material.imageurl} alt={material.title} className="w-fit h-fit object-cover rounded-md" />
+                
               </div>
               <div className="flex-1 space-y-3">
                 <h3 className="text-xl font-bold group-hover:text-blue-600 transition-colors line-clamp-2 text-gray-900 dark:text-white">
                   {material.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">{material.department}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                  {material.department}
+                </p>
                 <div className="flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
                     </svg>
                     {material.downloads} downloads
                   </span>
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
                     </svg>
                     {material.views} views
@@ -110,5 +126,5 @@ export default function FeaturedMaterials() {
         </div>
       </div>
     </section>
-  )
+  );
 }
