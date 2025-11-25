@@ -43,25 +43,25 @@ export default function FeaturedMaterials() {
   return (
     <section className="relative py-20 md:py-32 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute w-96 h-96 bg-gradient-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -bottom-20 -right-40"></div>
+        <div className="absolute w-96 h-96 bg-linear-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -bottom-20 -right-40"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full"></div>
+              <div className="h-1 w-12 bg-linear-to-br from-blue-600 to-cyan-400 rounded-full"></div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">
               Trending{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-br from-blue-600 via-cyan-500 to-cyan-400 bg-clip-text text-transparent">
                 Materials
               </span>
             </h2>
           </div>
           <Link
             href="/materials"
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full transition-all font-semibold shadow-lg hover:shadow-xl"
+            className="px-8 py-3 bg-linear-to-br from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full transition-all font-semibold shadow-lg hover:shadow-xl"
           >
             View All Materials
           </Link>
@@ -74,7 +74,7 @@ export default function FeaturedMaterials() {
               href={`/material/${material.id}`}
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex gap-6 group"
             >
-              <div className="hidden sm:flex w-24 h-24 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow">
+              <div className="hidden sm:flex w-24 h-24 bg-linear-to-br from-blue-600 to-cyan-500 rounded-2xl items-center justify-center flex-0 shadow-lg group-hover:shadow-xl transition-shadow">
                 <span className="text-white font-bold text-2xl">{material.type.charAt(0)}</span>
               </div>
               <div className="flex-1 space-y-3">
@@ -97,7 +97,7 @@ export default function FeaturedMaterials() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full text-sm font-semibold">
+                  <span className="px-4 py-2 bg-linear-to-br from-blue-600 to-cyan-500 text-white rounded-full text-sm font-semibold">
                     {material.type}
                   </span>
                   <span className="text-xs text-gray-500 dark:text-gray-400">
