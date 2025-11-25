@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-linear-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="font-bold text-lg">S</span>
               </div>
               <span className="font-bold text-lg">StudyHub</span>
