@@ -74,7 +74,7 @@ export default function FeaturedMaterials() {
               href={`/material/${material.id}`}
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex gap-6 group"
             >
-              <div className="hidden sm:flex w-24 h-24 bg-linear-to-br from-blue-600 to-cyan-500 rounded-2xl items-center justify-center flex-0 shadow-lg group-hover:shadow-xl transition-shadow">
+              <div className="hidden sm:flex w-24 h-24 bg-linear-to-br from-blue-600 to-cyan-500 rounded-2xl items-center justify-center shrink-0 shadow-lg group-hover:shadow-xl transition-shadow">
                 <span className="text-white font-bold text-2xl">{material.type.charAt(0)}</span>
               </div>
               <div className="flex-1 space-y-3">
