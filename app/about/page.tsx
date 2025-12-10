@@ -45,6 +45,7 @@ export default function AboutPage() {
           <div className="absolute w-96 h-96 bg-linear-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 bottom-20 right-20"></div>
         </div>
 
+
         <div className="container mx-auto px-4 relative z-10 py-20">
           <div className="max-w-4xl mx-auto">
             {/* Hero Section */}

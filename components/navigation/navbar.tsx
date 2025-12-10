@@ -79,6 +79,11 @@ export default function Header() {
           : "border-transparent"
       }`}
     >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-156 h-56 bg-linear-to-br from-blue-600 via-blue-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -top-40 -right-40 animate-pulse"></div>
+        <div className="absolute w-46 h-46 bg-linear-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 top-20 right-20"></div>
+      </div>
+
       <div className=" border mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 ">
           {/* Logo */}
