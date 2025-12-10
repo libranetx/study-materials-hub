@@ -41,6 +41,7 @@ export default function Hero() {
                 <span>Preview materials before download with PDF and video viewers</span>
               </li>
             </ul>
+    
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <button className="px-8 py-3 bg-linear-to-br from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-full transition-all font-semibold shadow-lg hover:shadow-xl inline-flex items-center gap-2">
                 <span>Explore Materials</span>
