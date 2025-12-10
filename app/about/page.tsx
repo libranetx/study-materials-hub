@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 
 export const metadata = {
@@ -42,8 +41,8 @@ export default function AboutPage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-white dark:bg-gray-900 pt-20">
         {/* Decorative Blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 bg-gradient-to-br from-blue-500 via-blue-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -top-40 -left-40 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-gradient-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 bottom-20 right-20"></div>
+          <div className="absolute w-96 h-96 bg-linear-to-br from-blue-500 via-blue-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -top-40 -left-40 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-linear-to-br from-purple-300 via-purple-200 to-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 bottom-20 right-20"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 py-20">
@@ -92,7 +91,7 @@ export default function AboutPage() {
 
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="service-card">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -109,7 +108,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="service-card">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -126,7 +125,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="service-card">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -150,7 +149,7 @@ export default function AboutPage() {
                 {values.map((value, index) => (
                   <div key={index} className="card-item">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl flex-shrink-0">{value.icon}</div>
+                      <div className="text-3xl shrink-0">{value.icon}</div>
                       <div>
                         <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400">{value.description}</p>
@@ -161,7 +160,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-12 text-center text-white">
+            <div className="bg-linear-to-br from-blue-600 to-cyan-500 rounded-2xl p-12 text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Join Our Learning Community</h2>
               <p className="text-lg mb-8 opacity-95">
                 Start exploring thousands of resources and join learners from around the world.
